@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MyProject — Mini Blender</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<header id="top"><b id="logo">◈ Mini Blender</b><nav id="menus"></nav><span id="ptitle"></span><button id="hbtn" aria-label="Help" title="Help (?)">?</button><button id="ptog" aria-label="Panels">☰</button></header>
+<aside id="tools"></aside>
+<main id="vp"><div id="pv"><span>Camera</span></div><div id="hint">G Move · R Rotate · S Scale · F Focus · Shift+D Clone · ? Help</div>
+<div id="vh"><b>Empty scene</b><span>Right-click · long-press · Shift+A to add an object</span></div>
+<div id="thirds"></div><div id="bars"><i></i><i></i></div>
+<div id="camhud"><div class="ch top"><span class="badge"><i></i>CAMERA VIEW</span><b id="cvn"></b><span class="sp"></span><button data-t="thirds" title="Guides (G)">▦</button><button data-t="bars" title="Cinema bars">▬</button><button data-t="fs" title="Fullscreen (F)">⛶</button><button data-t="rec" title="Record video">⏺</button><button data-t="x" class="xb" aria-label="Exit camera view">✕</button></div>
+<div class="ch bot"><button data-t="stop">■</button><button data-t="play">▶</button><button data-t="pause">❚❚</button><input id="tr2" type="range" min="0" max="5" step="0.01" value="0"><span id="tt2">0.00s</span></div></div></main>
+<aside id="side"><section id="outl"></section><section id="props"></section></aside>
+<footer id="tl">
+  <div class="bar"><button data-t="prev" title="Previous key">⏮</button><button data-t="stop">■</button><button data-t="play">▶</button><button data-t="pause">❚❚</button><button data-t="next" title="Next key">⏭</button><span id="tt">0.00s</span><button data-t="key">◆ Key</button><button data-t="del">◇ Del</button><button data-t="clr">Clear</button><button data-t="auto">● Auto</button><button data-t="ease">Ease</button><button data-t="loop" class="on">Loop</button><button data-t="spd">1×</button><label>Length <input id="dur" type="number" min="1" max="60" value="5"></label></div>
+  <div class="trk"><div id="kfs"></div><input id="tr" type="range" min="0" max="5" step="0.01" value="0"></div>
+</footer>
+<div id="stat"><i id="dot"></i><span id="st">New Project</span><span id="info"></span></div>
+<div id="splash" role="dialog" aria-label="What's new"><div class="sbox"><button id="sx" aria-label="Close">✕</button>
+<div class="simg"><svg viewBox="0 0 240 120" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path pathLength="1" d="M20 112 120 84 220 112M0 104 120 74 240 104M120 24 155 44V84L120 104 85 84V44ZM85 44 120 64 155 44M120 64V104"/><path class="g" pathLength="1" d="M10 118H230M40 110H200"/></svg></div>
+<small>NEW UPDATE</small><h2>Mini Blender 1.2</h2>
+<ul><li>Infinite adaptive grid + deep zoom</li><li>Smart Focus (F) &amp; Frame All (Home)</li><li>Right-click / long-press Add menu (Shift+A)</li><li>Shade Smooth / Flat</li><li>Starts with an empty scene</li><li>Compact camera helper</li></ul>
+<p class="by">Made by <b>Mobile Blender</b></p></div></div>
+<div id="toasts"></div>
+<div id="iris"></div>
+<div id="hbar"><span>Help mode — tap any part to see what it does</span><button id="hkeys">Shortcuts</button><button id="hx" class="pri">Exit</button></div>
+<div id="hcard"><b id="hct"></b><p id="hcb"></p></div>
+<div id="modal"><div class="box"><p id="mm"></p><input id="mi"><div id="mb"></div></div></div>
+<input type="file" id="file" hidden>
+<script type="module" src="script.js"></script>
+</body>
+</html>
